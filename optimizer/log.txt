@@ -1,0 +1,102 @@
+2024-05-12 01:02:56.881  INFO 23840 --- [main] es.urjc.etsii.grafo.TSP.Main             : Starting Main using Java 21.0.2 on DESKTOP-GRIHPPL with PID 23840 (C:\Users\BCT\IdeaProjects\optimizer\example-tsp\target\classes started by BCT in C:\Users\BCT\IdeaProjects\optimizer)
+2024-05-12 01:02:56.901  INFO 23840 --- [main] es.urjc.etsii.grafo.TSP.Main             : No active profile set, falling back to default profiles: default
+2024-05-12 01:02:58.933  INFO 23840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'eventAsyncConfigurer' of type [es.urjc.etsii.grafo.solver.services.events.EventAsyncConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-05-12 01:02:59.789  INFO 23840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-12 01:02:59.812  INFO 23840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-12 01:02:59.813  INFO 23840 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-05-12 01:03:00.141  INFO 23840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-12 01:03:00.142  INFO 23840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3074 ms
+2024-05-12 01:03:00.916  INFO 23840 --- [main] e.u.e.grafo.patches.PatchCollections     : Skipping Collections.shuffle() patch
+2024-05-12 01:03:00.919  INFO 23840 --- [main] e.u.etsii.grafo.patches.PatchMathRandom  : Skipping Math.random() patch
+2024-05-12 01:03:00.936  INFO 23840 --- [main] c.u.e.grafo.solver.services.IOManager    : Using solution serializers: [es.urjc.etsii.grafo.io.serializers.json.DefaultJSONSolutionSerializer@22a10ac6]
+2024-05-12 01:03:01.168  INFO 23840 --- [main] e.u.e.g.solver.services.Orchestrator     : Using SolutionBuilder implementation: ReflectiveSolutionBuilder
+2024-05-12 01:03:01.208  WARN 23840 --- [main] e.u.e.grafo.solver.executors.Executor    : No SolutionValidator implementation has been found, solution CORRECTNESS WILL NOT BE CHECKED
+2024-05-12 01:03:02.340  INFO 23840 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-05-12 01:03:02.924  INFO 23840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-12 01:03:02.928  INFO 23840 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-05-12 01:03:02.929  INFO 23840 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3b42121d]]
+2024-05-12 01:03:02.930  INFO 23840 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-05-12 01:03:02.961  INFO 23840 --- [main] es.urjc.etsii.grafo.TSP.Main             : Started Main in 7.1 seconds (JVM running for 8.097)
+2024-05-12 01:03:02.971  INFO 23840 --- [main] c.u.e.g.solver.services.Orchestrator     : Skipping CPU benchmark
+2024-05-12 01:03:02.973  INFO 23840 --- [main] c.u.e.g.solver.services.Orchestrator     : App started, ready to start solving!
+2024-05-12 01:03:02.974  INFO 23840 --- [main] c.u.e.g.solver.services.Orchestrator     : Experiments to execute: [ConstructiveExperiment, LocalSearchExperiment]
+2024-05-12 01:03:02.977  INFO 23840 --- [main] c.u.e.g.solver.services.Orchestrator     : Running experiment: ConstructiveExperiment
+2024-05-12 01:03:02.978  INFO 23840 --- [main] e.u.e.g.solver.services.InstanceManager  : Loading all instances to check correctness...
+2024-05-12 01:03:02.992  INFO 23840 --- [main] e.u.e.g.s.executors.ConcurrentExecutor   : Shutdown executor
+2024-05-12 01:03:02.995  INFO 23840 --- [main] c.u.e.g.solver.services.Orchestrator     : Total execution time: 0 (s)
+2024-05-12 01:03:03.028  INFO 23840 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-12 01:03:03.176 ERROR 23840 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-2.6.1.jar:2.6.1]
+	at es.urjc.etsii.grafo.solver.Mork.start(Mork.java:27) ~[classes/:na]
+	at es.urjc.etsii.grafo.TSP.Main.main(Main.java:7) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not load any instance for experiment: ConstructiveExperiment
+	at es.urjc.etsii.grafo.solver.services.InstanceManager.validate(InstanceManager.java:75) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.services.InstanceManager.getInstanceSolveOrder(InstanceManager.java:66) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.services.Orchestrator.experimentWrapper(Orchestrator.java:98) ~[classes/:na]
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:833) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1116) ~[na:na]
+	at es.urjc.etsii.grafo.solver.services.Orchestrator.run(Orchestrator.java:84) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.RunOnStart.run(RunOnStart.java:20) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767) ~[spring-boot-2.6.1.jar:2.6.1]
+	... 4 common frames omitted
+
+2024-05-12 01:03:03.188  INFO 23840 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-05-12 01:03:03.189  INFO 23840 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@3b42121d]]
+2024-05-12 01:03:03.189  INFO 23840 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-05-12 01:24:50.949  INFO 17200 --- [main] es.urjc.etsii.grafo.TSP.Main             : Starting Main using Java 21.0.2 on DESKTOP-GRIHPPL with PID 17200 (C:\Users\BCT\IdeaProjects\optimizer\example-tsp\target\classes started by BCT in C:\Users\BCT\IdeaProjects\optimizer)
+2024-05-12 01:24:50.965  INFO 17200 --- [main] es.urjc.etsii.grafo.TSP.Main             : No active profile set, falling back to default profiles: default
+2024-05-12 01:24:52.870  INFO 17200 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'eventAsyncConfigurer' of type [es.urjc.etsii.grafo.solver.services.events.EventAsyncConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-05-12 01:24:53.550  INFO 17200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-12 01:24:53.570  INFO 17200 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-12 01:24:53.571  INFO 17200 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2024-05-12 01:24:53.887  INFO 17200 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-12 01:24:53.887  INFO 17200 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2772 ms
+2024-05-12 01:24:54.482  INFO 17200 --- [main] e.u.e.grafo.patches.PatchCollections     : Skipping Collections.shuffle() patch
+2024-05-12 01:24:54.484  INFO 17200 --- [main] e.u.etsii.grafo.patches.PatchMathRandom  : Skipping Math.random() patch
+2024-05-12 01:24:54.498  INFO 17200 --- [main] c.u.e.grafo.solver.services.IOManager    : Using solution serializers: [es.urjc.etsii.grafo.io.serializers.json.DefaultJSONSolutionSerializer@6c101cc1]
+2024-05-12 01:24:54.741  INFO 17200 --- [main] e.u.e.g.solver.services.Orchestrator     : Using SolutionBuilder implementation: ReflectiveSolutionBuilder
+2024-05-12 01:24:54.776  WARN 17200 --- [main] e.u.e.grafo.solver.executors.Executor    : No SolutionValidator implementation has been found, solution CORRECTNESS WILL NOT BE CHECKED
+2024-05-12 01:24:55.346  INFO 17200 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-05-12 01:24:55.684  INFO 17200 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-12 01:24:55.687  INFO 17200 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-05-12 01:24:55.688  INFO 17200 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@33f17289]]
+2024-05-12 01:24:55.689  INFO 17200 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-05-12 01:24:55.708  INFO 17200 --- [main] es.urjc.etsii.grafo.TSP.Main             : Started Main in 5.71 seconds (JVM running for 6.684)
+2024-05-12 01:24:55.714  INFO 17200 --- [main] c.u.e.g.solver.services.Orchestrator     : Skipping CPU benchmark
+2024-05-12 01:24:55.714  INFO 17200 --- [main] c.u.e.g.solver.services.Orchestrator     : App started, ready to start solving!
+2024-05-12 01:24:55.715  INFO 17200 --- [main] c.u.e.g.solver.services.Orchestrator     : Experiments to execute: [ConstructiveExperiment, LocalSearchExperiment]
+2024-05-12 01:24:55.717  INFO 17200 --- [main] c.u.e.g.solver.services.Orchestrator     : Running experiment: ConstructiveExperiment
+2024-05-12 01:24:55.718  INFO 17200 --- [main] e.u.e.g.solver.services.InstanceManager  : Loading all instances to check correctness...
+2024-05-12 01:24:55.722  INFO 17200 --- [main] e.u.e.g.s.executors.ConcurrentExecutor   : Shutdown executor
+2024-05-12 01:24:55.724  INFO 17200 --- [main] c.u.e.g.solver.services.Orchestrator     : Total execution time: 0 (s)
+2024-05-12 01:24:55.731  INFO 17200 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-05-12 01:24:55.806 ERROR 17200 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751) ~[spring-boot-2.6.1.jar:2.6.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-2.6.1.jar:2.6.1]
+	at es.urjc.etsii.grafo.solver.Mork.start(Mork.java:27) ~[classes/:na]
+	at es.urjc.etsii.grafo.TSP.Main.main(Main.java:7) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: Path does not exist or not a folder: C:\Users\BCT\IdeaProjects\optimizer\instances\TSPLIB\instances
+	at es.urjc.etsii.grafo.util.IOUtil.checkExists(IOUtil.java:41) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.services.InstanceManager.getInstanceSolveOrder(InstanceManager.java:57) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.services.Orchestrator.experimentWrapper(Orchestrator.java:98) ~[classes/:na]
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:833) ~[na:na]
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1116) ~[na:na]
+	at es.urjc.etsii.grafo.solver.services.Orchestrator.run(Orchestrator.java:84) ~[classes/:na]
+	at es.urjc.etsii.grafo.solver.RunOnStart.run(RunOnStart.java:20) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767) ~[spring-boot-2.6.1.jar:2.6.1]
+	... 4 common frames omitted
+
+2024-05-12 01:24:55.816  INFO 17200 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-05-12 01:24:55.816  INFO 17200 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@33f17289]]
+2024-05-12 01:24:55.817  INFO 17200 --- [main] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
